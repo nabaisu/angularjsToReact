@@ -141,6 +141,6 @@ export function parseAngularExpression(expr) {
   return expr.endsWith(";") ? expr.slice(0, -1) : expr;
 }
 
-export function createIfShow(j, left, right) {
-  return j.jsxExpressionContainer(j.logicalExpression("&&", left, right));
+export function createIfShow(j, test, consequent) {
+  return j.jsxExpressionContainer(j.conditionalExpression(test, consequent, j.identifier("null")));
 }

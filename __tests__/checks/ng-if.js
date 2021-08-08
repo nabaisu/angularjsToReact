@@ -12,12 +12,10 @@ export const inputNgIf = `
 
 export const outputNgIf = `
 <div class="modal-header-combined {{customized}}" ng-show="!waitLoad">
-  {!customized && <div class="modal-header-combined__header heading-2">
-    {{ modalHeader }}
-  </div>}
-  {second && <p class="random">
-    {{ modalHeader }}
-  </p>}
+  {!customized ? (
+    <div class="modal-header-combined__header heading-2">{{ modalHeader }}</div>
+  ) : null}
+  {second && <p class="random">{{ modalHeader }}</p>}
   <div class="modal-header-combined__content" ng-transclude></div>
 </div>
 `;
