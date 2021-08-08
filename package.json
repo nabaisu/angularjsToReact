@@ -1,0 +1,21 @@
+{
+  "type" : "module",
+  "name": "angularjs-to-react-jscodeshift",
+  "version": "0.0.1",
+  "description": "Trying to shift from angularjs to react with jscodeshifts",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --experimental-modules --experimental-vm-modules node_modules/jest/bin/jest.js --watchAll",
+    "jest:clearcache": "jest --clear-cache"
+  },
+  "author": "Joao Nabais",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.0.1",
+    "jscodeshift": "^0.13.0"
+  },
+  "engines": {
+    "node": ">= 12.16.3",
+    "npm": ">= 6.14.4"
+  }
+}
