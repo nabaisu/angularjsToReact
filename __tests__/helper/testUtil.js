@@ -9,5 +9,5 @@ export function transform(file, fn) {
   const fileSource = (typeof file === 'string') ? file: file.source
   const root = j(fileSource);
   fn(j, root);
-  return root.toSource();
+  return root.toSource()
 }
