@@ -38,7 +38,7 @@ function createMap(j, expression, args, path, index) {
       ),
       [
         j.arrowFunctionExpression(
-          [j.identifier(args.join(","))],
+          args.map(arg => j.identifier(arg)),
           j.blockStatement([j.returnStatement(path.node)])
         ),
       ]

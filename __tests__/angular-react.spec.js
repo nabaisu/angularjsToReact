@@ -34,8 +34,8 @@ describe("Angular to React", () => {
       expect(output.trim()).toEqual(outputNgModel.trim());
     });
 
-    xit("ng-if to react", () => {
-      const output = transform(inputNgIf, ngIfFn);
+    it("ng-if to react", () => {
+      const output = transform(inputNgIf, ngIfFn); //?
       expect(output.trim()).toEqual(outputNgIf.trim());
     });
 

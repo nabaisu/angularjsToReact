@@ -2,7 +2,7 @@ export const inputNgRepeat = `
 <div>
   <ul>
     <li ng-repeat="som in something">{som.name}</li>
-    <p ng-repeat="outo in outros">
+    <p ng-repeat="(outo, i) in outros">
       <ul>
         <li ng-repeat="item in items">other thing</li>
       </ul>
@@ -17,7 +17,7 @@ export const outputNgRepeat = `
     {something.map(som => {
       return <li key={som.id}>{som.name}</li>;
     })}
-    {outros.map(outo => {
+    {outros.map((outo, i) => {
       return (
         <p key={outo.id}>
           <ul>
